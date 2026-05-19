@@ -1,0 +1,13 @@
+{
+    "git": [
+        {
+            "name": "criminalip",
+            "url": "https://github.com/criminalip/C2-Daily-Feed",
+            "url_raw": "https://raw.githubusercontent.com/criminalip/C2-Daily-Feed/refs/heads/main/",
+            "file_format": "YYYY-MM-DD.csv",
+            "metadata": {
+                "cron": "10 1 * * *"
+            }
+        }
+    ]
+}
