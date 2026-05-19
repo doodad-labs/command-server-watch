@@ -7,7 +7,6 @@ from .storage import save_payload
 # Path to the sources config, relative to wherever the process is run from
 SOURCES_FILE = "../sources.json"
 
-
 def _build_url(source: dict) -> str:
     """Resolve the full URL for today's feed file from a source definition.
 
