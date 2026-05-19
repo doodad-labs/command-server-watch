@@ -1,106 +1,66 @@
 import json
-import requests
 from datetime import datetime
-import csv
-import os
+import requests
+from .extractors import REGISTRY
+from .storage import save_payload
 
-def save_payload(payload):
+# Path to the sources config, relative to wherever the process is run from
+SOURCES_FILE = "../sources.json"
 
-    # Validate the payload
-    if "ip" not in payload: return
-    if "results" not in payload: return
-    if "flags" not in payload: return
 
-    # Validate the IP address and skip if it's a multicast or reserved address
-    ip = payload["ip"]
-    firstOctet = int(ip.split(".")[0])
-    if firstOctet >= 224 and firstOctet <= 239: return # Skip multicast addresses
-    if firstOctet >= 240 and firstOctet <= 255: return # Skip reserved addresses
+def _build_url(source: dict) -> str:
+    """Resolve the full URL for today's feed file from a source definition.
 
-    # Make sure /data directory exists
-    if not os.path.exists("data"):
-        os.makedirs("data")
-    
-    # Make sure /data/{firstOctet}.jsonl exists
-    if not os.path.exists(f"data/{firstOctet}.jsonl"):
-        with open(f"data/{firstOctet}.jsonl", "w") as f:
-            pass
+    The file_format field supports YYYY, MM, and DD tokens which are replaced
+    with today's date values, e.g. "YYYY-MM-DD.csv" → "2026-05-19.csv".
+    """
+    today = datetime.now()
 
-    # Check if the IP already exists in the file, if it does, update the existing entry instead of adding a new one
-    exists = False
-    
-    # Open /data/{firstOctet}.jsonl and check if the IP already exists
-    jsonList = []
-    with open(f"data/{firstOctet}.jsonl", 'r') as json_file:
-        jsonList = list(json_file)
+    # Convert the custom token format to a strftime-ready format string
+    filename = (
+        source["file_format"]
+        .replace("YYYY", today.strftime("%Y"))
+        .replace("MM", today.strftime("%m"))
+        .replace("DD", today.strftime("%d"))
+    )
 
-    for record in jsonList:
-        
-        # Skip empty lines
-        if record.strip() == "": continue
+    return source["url_raw"] + filename
 
-        jsonLine = json.loads(record)
-        if jsonLine["ip"] == ip:
-            exists = True
 
-            # If the IP already exists, update the existing entry
-            jsonLine["flags"] = list(set(jsonLine["flags"] + payload["flags"]))
-            jsonLine["results"] = list(jsonLine["results"] + payload["results"])
+def _process_git_source(source: dict) -> None:
+    """Fetch and ingest a single git-hosted feed source.
 
-            # Write the updated entry back to the file at the same line
-            with open(f"data/{firstOctet}.jsonl", 'w') as json_file:
-                for line in jsonList:
-                    if line == record:
-                        json_file.write(json.dumps(jsonLine) + "\n")
-                    else:
-                        json_file.write(line)
-            break
+    Looks up the registered extractor for the source by name, parses the
+    response body into payloads, and persists each one via save_payload.
+    """
+    url = _build_url(source)
+    response = requests.get(url)
 
-    # If the IP doesn't already exist, add it to the file
-    if not exists:
-        with open(f"data/{firstOctet}.jsonl", "a") as f:
-            f.write(json.dumps(payload) + "\n")
+    # Bail early if the feed is unreachable or returned an error
+    if response.status_code != 200:
+        print(f"Failed to fetch {source['name']} from {url} (HTTP {response.status_code})")
+        return
 
-def aggregate_git_data(data):
+    extractor = REGISTRY.get(source["name"])
 
-    filePath = f"{data["file_format"]}".replace("YYYY", str(datetime.now().year)).replace("MM", str(datetime.now().month).rjust(2, "0")).replace("DD", str(datetime.now().day).rjust(2, "0"))
-    print(data["url_raw"] + filePath)
+    # Warn and skip if no extractor has been registered for this source name
+    if extractor is None:
+        print(f"No extractor registered for source: {source['name']}")
+        return
 
-    r = requests.get(data["url_raw"] + filePath)
-    body = r.text
+    for payload in extractor(response.text):
+        save_payload(payload)
 
-    if data["type"] == "csv":
-        reader = csv.reader(body.splitlines())
-        for row in reader:
-            
-            ip = row[0];flag = row[1];port = row[2];score = row[3];country = row[4];time = row[5];
-            if ip == "IP": continue
 
-            save_payload({
-                "ip": ip,
-                "results": [
-                    {
-                        "source": data["name"],
-                        "datetime": datetime.now().isoformat(),
-                        "flags": [
-                            flag
-                        ]
-                    }
-                ],
-                "flags": [
-                    flag
-                ]
-            })
-
-def main():
-
-    # Load the sources from the JSON file
-    sources = {}
-    with open("sources.json", "r") as f:
+def main() -> None:
+    """Entry point: load sources config and process each configured feed."""
+    with open(SOURCES_FILE) as f:
         sources = json.load(f)
 
+    # Only git-hosted sources are supported for now
     for source in sources.get("git", []):
-        aggregate_git_data(source)
+        _process_git_source(source)
+
 
 if __name__ == "__main__":
     main()
