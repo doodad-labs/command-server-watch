@@ -3,7 +3,7 @@ import os
 from ipaddress import ip_address
 from .utils import valid_ip, result_key
 
-OUTPUT_DIR = "../data"
+OUTPUT_DIR = "../out/data"
 
 def save_payload(payload: dict) -> None:
     """Persist a payload to disk, merging with any existing data for that IP.
