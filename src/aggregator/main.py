@@ -57,7 +57,7 @@ def main() -> None:
         sources = json.load(f)
 
     # Only git-hosted sources are supported for now
-    for source in sources.get("git", []):
+    for source in sources.get("aggregator", {}).get("git", []):
         _process_git_source(source)
 
 
