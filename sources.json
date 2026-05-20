@@ -11,6 +11,12 @@
                     "cron": "10 1 * * *"
                 }
             }
+        ],
+        "json": [
+            {
+                "name": "feodotracker",
+                "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
+            }
         ]
     },
     "tracker": {

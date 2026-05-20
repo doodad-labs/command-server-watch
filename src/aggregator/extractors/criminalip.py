@@ -26,12 +26,12 @@ def extract(body: str) -> list[dict]:
 
         payloads.append({
             "ip": ip,
-            "flags": [flag],
+            "flags": [flag.lower()],
             "results": [{
                 "source": "criminalip",
                 # Record when this aggregator ingested the entry, not the scan time
                 "datetime": datetime.now().isoformat(),
-                "flags": [flag],
+                "flags": [flag.lower()],
                 "metadata": {
                     "port": port,
                     "score": score,
