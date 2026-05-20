@@ -22,6 +22,10 @@ jobs:
                   python-version: "3.12"
                   cache: "pip"
 
+            - name: Install dependencies
+              working-directory: src
+              run: pip install -r requirements.txt
+
             - name: Run Aggregate
               working-directory: src
               run: python -m aggregator
