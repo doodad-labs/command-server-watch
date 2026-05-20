@@ -22,10 +22,8 @@ jobs:
                   python-version: "3.12"
                   cache: "pip"
 
-            - name: CD into src directory
-              run: cd src
-
             - name: Run Aggregate
+              working-directory: src
               run: python -m aggregator
 
             - name: Checkout target repository
