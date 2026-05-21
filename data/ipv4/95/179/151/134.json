@@ -1,0 +1,21 @@
+{
+    "ip": "95.179.151.134",
+    "flags": [
+        "c2_metasploit"
+    ],
+    "results": [
+        {
+            "source": "criminalip",
+            "datetime": "2026-05-21T00:07:34.057240",
+            "flags": [
+                "c2_metasploit"
+            ],
+            "metadata": {
+                "port": "3790",
+                "score": "Critical/Critical",
+                "country": "nl",
+                "scanTime": "2026-05-11 16:24:31"
+            }
+        }
+    ]
+}
