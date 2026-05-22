@@ -6,15 +6,15 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-21T22:19:37.210865",
+            "datetime": "2026-05-22T00:02:37.744204",
             "flags": [
                 "c2_meshagent"
             ],
             "metadata": {
-                "port": "80",
+                "port": "8086",
                 "score": "Critical/Critical",
                 "country": "za",
-                "scanTime": "2026-05-19 19:28:01"
+                "scanTime": "2026-05-20 20:04:48"
             }
         }
     ]
