@@ -1,0 +1,21 @@
+{
+    "ip": "49.13.116.197",
+    "flags": [
+        "c2_mythic"
+    ],
+    "results": [
+        {
+            "source": "criminalip",
+            "datetime": "2026-05-23T00:14:06.215976",
+            "flags": [
+                "c2_mythic"
+            ],
+            "metadata": {
+                "port": "80",
+                "score": "Critical/Critical",
+                "country": "de",
+                "scanTime": "2026-05-18 12:16:48"
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "ip": "40.66.42.246",
+    "flags": [
+        "c2_havoc"
+    ],
+    "results": [
+        {
+            "source": "criminalip",
+            "datetime": "2026-05-23T00:14:06.216198",
+            "flags": [
+                "c2_havoc"
+            ],
+            "metadata": {
+                "port": "443",
+                "score": "Critical/Critical",
+                "country": "fr",
+                "scanTime": "2026-05-12 02:23:04"
+            }
+        }
+    ]
+}
