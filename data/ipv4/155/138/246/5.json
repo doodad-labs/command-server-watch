@@ -6,15 +6,15 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-22T22:59:13.819132",
+            "datetime": "2026-05-25T03:51:57.185328",
             "flags": [
                 "c2_havoc"
             ],
             "metadata": {
-                "port": "443",
+                "port": "8080",
                 "score": "Critical/Critical",
                 "country": "us",
-                "scanTime": "2026-05-06 18:39:10"
+                "scanTime": "2026-05-05 13:37:15"
             }
         }
     ]
