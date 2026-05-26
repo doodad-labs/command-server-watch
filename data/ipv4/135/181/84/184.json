@@ -1,0 +1,21 @@
+{
+    "ip": "135.181.84.184",
+    "flags": [
+        "c2"
+    ],
+    "results": [
+        {
+            "source": "criminalip",
+            "datetime": "2026-05-26T03:34:32.705313",
+            "flags": [
+                "c2"
+            ],
+            "metadata": {
+                "port": "80",
+                "score": "Critical/Critical",
+                "country": "fi",
+                "scanTime": "2026-05-24 19:58:46"
+            }
+        }
+    ]
+}

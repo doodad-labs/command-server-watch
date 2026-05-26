@@ -6,15 +6,15 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-23T23:58:08.678484",
+            "datetime": "2026-05-26T03:34:32.705670",
             "flags": [
                 "c2_mythic"
             ],
             "metadata": {
-                "port": "443",
+                "port": "80",
                 "score": "Critical/Critical",
                 "country": "us",
-                "scanTime": "2026-05-17 01:34:20"
+                "scanTime": "2026-05-19 00:34:08"
             }
         }
     ]
