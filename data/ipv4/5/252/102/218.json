@@ -6,7 +6,7 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-26T22:19:46.746239",
+            "datetime": "2026-05-27T00:05:04.473841",
             "flags": [
                 "c2_mythic"
             ],
@@ -14,7 +14,7 @@
                 "port": "80",
                 "score": "Critical/Critical",
                 "country": "de",
-                "scanTime": "2026-05-21 01:16:14"
+                "scanTime": "2026-05-23 13:47:44"
             }
         }
     ]

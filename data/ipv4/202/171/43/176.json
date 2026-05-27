@@ -6,7 +6,7 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-20T22:24:18.861322",
+            "datetime": "2026-05-27T00:05:04.473600",
             "flags": [
                 "c2_havoc"
             ],
@@ -14,7 +14,7 @@
                 "port": "443",
                 "score": "Critical/Critical",
                 "country": "my",
-                "scanTime": "2026-05-12 20:20:48"
+                "scanTime": "2026-05-12 18:43:53"
             }
         }
     ]
