@@ -74,15 +74,32 @@ def _merge_into(existing: dict, new: dict) -> None:
     """Merge new payload data into existing in-place.
 
     Flags are unioned and sorted. Results are deduplicated by (source, flags)
-    key, keeping the first occurrence when duplicates are found.
+    key, keeping the first occurrence when duplicates are found. Original
+    datetime values are preserved for existing results.
     """
     # Union the flag sets and re-sort for stable output
     existing["flags"] = sorted(set(existing["flags"]) | set(new["flags"]))
 
-    # Build a dict keyed by result identity so duplicates are dropped
+    # Build a dict keyed by result identity, preserving original datetime
     seen = {}
-    for r in existing["results"] + new["results"]:
-        seen.setdefault(result_key(r), r)
+    
+    # Process existing results first to preserve their original datetime
+    for r in existing["results"]:
+        key = result_key(r)
+        seen[key] = r
+    
+    # Add new results, but if they already exist (same key), keep the old datetime
+    for r in new["results"]:
+        key = result_key(r)
+        if key not in seen:
+            # New result - add it as-is
+            seen[key] = r
+        else:
+            # Result already exists - preserve original datetime
+            existing_result = seen[key]
+            if "datetime" in existing_result and "datetime" in r:
+                r["datetime"] = existing_result["datetime"]
+            seen[key] = r
 
     existing["results"] = list(seen.values())
 
