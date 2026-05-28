@@ -3,10 +3,10 @@
 ```bash
 cd src
 ~/venv/bin/python -m aggregator
-
-https://tracker.viriback.com/
-
 ```
+
+- https://tracker.viriback.com/
+- threatfox.abuse.ch
 
 # Tracker
 
