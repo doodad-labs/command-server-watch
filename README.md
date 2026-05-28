@@ -7,6 +7,8 @@ cd src
 
 - https://tracker.viriback.com/
 - https://threatfox.abuse.ch/browse/
+- https://github.com/criminalip/C2-Daily-Feed
+- https://feodotracker.abuse.ch
 
 # Tracker
 
