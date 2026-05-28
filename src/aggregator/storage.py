@@ -14,7 +14,8 @@ def save_payload(payload: dict) -> None:
         data/ipv6/2001/0db8/85a3/0000/0000/8a2e/0370/7334.json
 
     If a file for the IP already exists, flags and results are merged and
-    deduplicated rather than overwritten.
+    deduplicated rather than overwritten. Files are only written if they have
+    meaningful changes beyond datetime updates.
     """
     if not _validate_payload(payload):
         return
@@ -29,6 +30,10 @@ def save_payload(payload: dict) -> None:
             existing = json.load(f)
 
         _merge_into(existing, payload)
+
+        # Skip writing if the only change is datetime
+        if _only_datetime_changed(file_path, existing):
+            return
 
         with open(file_path, "w") as f:
             json.dump(existing, f, indent=4)
@@ -77,3 +82,34 @@ def _merge_into(existing: dict, new: dict) -> None:
         seen.setdefault(result_key(r), r)
 
     existing["results"] = list(seen.values())
+
+
+def _only_datetime_changed(file_path: str, new_data: dict) -> bool:
+    """Check if the new data only differs from the file by datetime fields.
+
+    Returns True if the only differences are in datetime values (meaning we
+    should skip writing to avoid cluttering git history with datetime-only changes).
+    """
+    with open(file_path, "r") as f:
+        existing_data = json.load(f)
+
+    # If flags changed, it's not just datetime
+    if existing_data.get("flags") != new_data.get("flags"):
+        return False
+
+    # If result count changed, it's not just datetime
+    if len(existing_data.get("results", [])) != len(new_data.get("results", [])):
+        return False
+
+    # Compare each result, ignoring datetime fields
+    for existing_result, new_result in zip(
+        existing_data.get("results", []), new_data.get("results", [])
+    ):
+        # Make copies without datetime for comparison
+        existing_copy = {k: v for k, v in existing_result.items() if k != "datetime"}
+        new_copy = {k: v for k, v in new_result.items() if k != "datetime"}
+
+        if existing_copy != new_copy:
+            return False
+
+    return True
