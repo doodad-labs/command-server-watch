@@ -1,0 +1,19 @@
+{
+    "ip": "8.218.254.115",
+    "flags": [
+        "supershell"
+    ],
+    "results": [
+        {
+            "source": "viribacktracker",
+            "datetime": "2026-05-28T10:21:14.803530",
+            "flags": [
+                "supershell"
+            ],
+            "metadata": {
+                "firstSeen": "10-05-2026",
+                "login": "http://8.218.254.115:9999/supershell/login/"
+            }
+        }
+    ]
+}

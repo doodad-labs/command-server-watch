@@ -1,0 +1,19 @@
+{
+    "ip": "103.144.245.73",
+    "flags": [
+        "supershell"
+    ],
+    "results": [
+        {
+            "source": "viribacktracker",
+            "datetime": "2026-05-28T10:21:14.803502",
+            "flags": [
+                "supershell"
+            ],
+            "metadata": {
+                "firstSeen": "23-05-2026",
+                "login": "http://103.144.245.73:8888/supershell/login/"
+            }
+        }
+    ]
+}
