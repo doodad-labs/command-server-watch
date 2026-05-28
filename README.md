@@ -3,6 +3,9 @@
 ```bash
 cd src
 ~/venv/bin/python -m aggregator
+
+https://tracker.viriback.com/
+
 ```
 
 # Tracker
