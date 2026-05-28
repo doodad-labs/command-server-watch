@@ -23,6 +23,18 @@
                 "name": "viribacktracker",
                 "url": "https://tracker.viriback.com/last30.php"
             }
+        ],
+        "api": [
+            {
+                "name": "threatfox",
+                "url": "https://threatfox-api.abuse.ch/api/v1/",
+                "query": {
+                    "query": "taginfo",
+                    "tag": "c2 ",
+                    "days": 1,
+                    "limit": 1000
+                }
+            }
         ]
     },
     "tracker": {

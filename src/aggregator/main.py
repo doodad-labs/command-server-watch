@@ -94,6 +94,18 @@ def _process_csv_source(source: dict) -> None:
     for payload in extractor(response.text):
         save_payload(payload)
 
+def _process_api_source(source: dict) -> None:
+
+    extractor = REGISTRY.get(source["name"])
+
+    # Warn and skip if no extractor has been registered for this source name
+    if extractor is None:
+        print(f"No extractor registered for source: {source['name']}")
+        return
+
+    for payload in extractor(source["url"], source.get("query", {})):
+        save_payload(payload)
+
 
 def main() -> None:
     """Entry point: load sources config and process each configured feed."""
@@ -101,14 +113,17 @@ def main() -> None:
         sources = json.load(f)
 
     # Only git-hosted sources are supported for now
-    for source in sources.get("aggregator", {}).get("git", []):
-        _process_git_source(source)
+    # for source in sources.get("aggregator", {}).get("git", []):
+    #     _process_git_source(source)
 
-    for source in sources.get("aggregator", {}).get("json", []):
-        _process_json_source(source)
+    # for source in sources.get("aggregator", {}).get("json", []):
+    #     _process_json_source(source)
 
-    for source in sources.get("aggregator", {}).get("csv", []):
-        _process_csv_source(source)
+    # for source in sources.get("aggregator", {}).get("csv", []):
+    #     _process_csv_source(source)
+
+    for source in sources.get("aggregator", {}).get("api", []):
+        _process_api_source(source)
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ cd src
 ```
 
 - https://tracker.viriback.com/
-- threatfox.abuse.ch
+- https://threatfox.abuse.ch/browse/
 
 # Tracker
 
