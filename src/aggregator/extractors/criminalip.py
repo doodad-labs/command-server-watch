@@ -16,13 +16,11 @@ def extract(body: str) -> list[dict]:
     """
     payloads = []
 
-    reader = csv.reader(body.splitlines())
+    content = body.splitlines()[1:]  # Skip the header row
+    reader = csv.reader(content)
+
     for row in reader:
         ip, flag, port, score, country, scan_time = row
-
-        # Skip the header row
-        if ip == "IP":
-            continue
 
         payloads.append({
             "ip": ip,
