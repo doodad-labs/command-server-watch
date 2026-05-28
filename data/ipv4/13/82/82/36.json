@@ -6,7 +6,7 @@
     "results": [
         {
             "source": "criminalip",
-            "datetime": "2026-05-24T23:03:37.811537",
+            "datetime": "2026-05-28T03:37:36.516198",
             "flags": [
                 "c2_meshagent"
             ],
@@ -14,7 +14,7 @@
                 "port": "80",
                 "score": "Critical/Critical",
                 "country": "us",
-                "scanTime": "2026-05-22 18:13:45"
+                "scanTime": "2026-05-26 19:16:50"
             }
         }
     ]

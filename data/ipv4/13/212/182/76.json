@@ -1,0 +1,21 @@
+{
+    "ip": "13.212.182.76",
+    "flags": [
+        "c2_meshagent"
+    ],
+    "results": [
+        {
+            "source": "criminalip",
+            "datetime": "2026-05-28T03:37:36.516179",
+            "flags": [
+                "c2_meshagent"
+            ],
+            "metadata": {
+                "port": "80",
+                "score": "Critical/Critical",
+                "country": "sg",
+                "scanTime": "2026-05-26 18:27:35"
+            }
+        }
+    ]
+}
