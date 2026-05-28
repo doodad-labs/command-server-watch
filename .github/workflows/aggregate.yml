@@ -41,6 +41,8 @@ jobs:
             - name: Run Aggregate
               working-directory: src
               run: python -m aggregator
+              env:
+                  ABUSE_CH_KEY: ${{ secrets.ABUSE_CH_KEY }}
 
             - name: Checkout target repository
               uses: actions/checkout@v4
