@@ -17,6 +17,12 @@
                 "name": "feodotracker",
                 "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.json"
             }
+        ],
+        "csv": [
+            {
+                "name": "viribacktracker",
+                "url": "https://tracker.viriback.com/last30.php"
+            }
         ]
     },
     "tracker": {

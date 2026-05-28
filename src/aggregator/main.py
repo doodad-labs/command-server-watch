@@ -74,6 +74,26 @@ def _process_json_source(source: dict) -> None:
     for payload in extractor(response.text):
         save_payload(payload)
 
+def _process_csv_source(source: dict) -> None:
+
+    url = source["url"]
+    response = requests.get(url)
+
+    # Bail early if the feed is unreachable or returned an error
+    if response.status_code != 200:
+        print(f"Failed to fetch {source['name']} from {url} (HTTP {response.status_code})")
+        return
+
+    extractor = REGISTRY.get(source["name"])
+
+    # Warn and skip if no extractor has been registered for this source name
+    if extractor is None:
+        print(f"No extractor registered for source: {source['name']}")
+        return
+
+    for payload in extractor(response.text):
+        save_payload(payload)
+
 
 def main() -> None:
     """Entry point: load sources config and process each configured feed."""
@@ -86,6 +106,9 @@ def main() -> None:
 
     for source in sources.get("aggregator", {}).get("json", []):
         _process_json_source(source)
+
+    for source in sources.get("aggregator", {}).get("csv", []):
+        _process_csv_source(source)
 
 
 if __name__ == "__main__":
