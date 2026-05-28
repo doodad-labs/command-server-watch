@@ -10,6 +10,8 @@ def extract(body: str) -> list[dict]:
 
     for object in reader:
 
+        firstSeen = datetime.strptime(object[3], "%d-%m-%Y")
+
         payloads.append({
             "ip": object[2],
             "flags": [object[0].lower()],
@@ -19,7 +21,7 @@ def extract(body: str) -> list[dict]:
                 "datetime": datetime.now().isoformat(),
                 "flags": [object[0].lower()],
                 "metadata": {
-                    "firstSeen": object[3],
+                    "firstSeen": firstSeen.isoformat(),
                     "login": object[1],
                 },
             }],
