@@ -29,10 +29,13 @@ def save_payload(payload: dict) -> None:
         with open(file_path, "r") as f:
             existing = json.load(f)
 
+        # Keep a copy before merging to detect meaningful changes
+        before_merge = json.loads(json.dumps(existing))
+
         _merge_into(existing, payload)
 
         # Skip writing if the only change is datetime
-        if _only_datetime_changed(file_path, existing):
+        if _only_datetime_changed(before_merge, existing):
             return
 
         with open(file_path, "w") as f:
@@ -84,32 +87,29 @@ def _merge_into(existing: dict, new: dict) -> None:
     existing["results"] = list(seen.values())
 
 
-def _only_datetime_changed(file_path: str, new_data: dict) -> bool:
-    """Check if the new data only differs from the file by datetime fields.
+def _only_datetime_changed(before: dict, after: dict) -> bool:
+    """Check if the data only differs by datetime fields after merging.
 
-    Returns True if the only differences are in datetime values (meaning we
-    should skip writing to avoid cluttering git history with datetime-only changes).
+    Compares the state before merge with the state after merge. Returns True
+    if the only differences are in datetime values.
     """
-    with open(file_path, "r") as f:
-        existing_data = json.load(f)
-
     # If flags changed, it's not just datetime
-    if existing_data.get("flags") != new_data.get("flags"):
+    if before.get("flags") != after.get("flags"):
         return False
 
     # If result count changed, it's not just datetime
-    if len(existing_data.get("results", [])) != len(new_data.get("results", [])):
+    if len(before.get("results", [])) != len(after.get("results", [])):
         return False
 
     # Compare each result, ignoring datetime fields
-    for existing_result, new_result in zip(
-        existing_data.get("results", []), new_data.get("results", [])
+    for before_result, after_result in zip(
+        before.get("results", []), after.get("results", [])
     ):
         # Make copies without datetime for comparison
-        existing_copy = {k: v for k, v in existing_result.items() if k != "datetime"}
-        new_copy = {k: v for k, v in new_result.items() if k != "datetime"}
+        before_copy = {k: v for k, v in before_result.items() if k != "datetime"}
+        after_copy = {k: v for k, v in after_result.items() if k != "datetime"}
 
-        if existing_copy != new_copy:
+        if before_copy != after_copy:
             return False
 
     return True
