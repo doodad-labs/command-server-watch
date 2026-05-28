@@ -1,0 +1,24 @@
+{
+    "ip": "8.163.49.50",
+    "flags": [
+        "cobalt strike"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-05-28T13:33:04.488970",
+            "flags": [
+                "cobalt strike"
+            ],
+            "metadata": {
+                "firstSeen": "2026-05-27T07:09:22",
+                "port": "80",
+                "reference": null,
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                "id": "1818956",
+                "ioc": "8.163.49.50:80",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
