@@ -16,6 +16,19 @@ jobs:
                   ref: workflow
                   fetch-depth: 0
 
+            - name: Checkout main branch (data repository)
+              uses: actions/checkout@v4
+              with:
+                  ref: main
+                  path: main-data
+                  fetch-depth: 1
+
+            - name: Copy existing data from main branch
+              run: |
+                  # Copy the data directory to out/data so aggregator can merge with it
+                  mkdir -p out
+                  cp -r main-data/data out/data || true
+
             - name: Setup Python
               uses: actions/setup-python@v4
               with:
