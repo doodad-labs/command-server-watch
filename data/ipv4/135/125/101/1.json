@@ -1,0 +1,24 @@
+{
+    "ip": "135.125.101.1",
+    "flags": [
+        "unknown stealer"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-02T17:24:04.157895",
+            "flags": [
+                "unknown stealer"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-02T14:09:38",
+                "port": "80",
+                "reference": "https://www.shodan.io/host/135.125.101.1#80",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                "id": "1821237",
+                "ioc": "135.125.101.1:80",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}

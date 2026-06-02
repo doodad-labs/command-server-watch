@@ -1,0 +1,24 @@
+{
+    "ip": "3.124.67.191",
+    "flags": [
+        "dcrat"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-02T17:24:04.157822",
+            "flags": [
+                "dcrat"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-02T14:31:19",
+                "port": "16242",
+                "reference": "",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
+                "id": "1821257",
+                "ioc": "3.124.67.191:16242",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}

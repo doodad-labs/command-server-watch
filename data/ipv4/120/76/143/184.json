@@ -1,0 +1,24 @@
+{
+    "ip": "120.76.143.184",
+    "flags": [
+        "cobalt strike"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-02T17:24:04.160840",
+            "flags": [
+                "cobalt strike"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-02T13:56:46",
+                "port": "8899",
+                "reference": "https://www.shodan.io/host/120.76.143.184#8899",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                "id": "1820934",
+                "ioc": "120.76.143.184:8899",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}

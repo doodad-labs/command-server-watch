@@ -1,0 +1,24 @@
+{
+    "ip": "34.27.66.246",
+    "flags": [
+        "unknown malware"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-02T17:24:04.158829",
+            "flags": [
+                "unknown malware"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-02T14:00:44",
+                "port": "8080",
+                "reference": "https://www.shodan.io/host/34.27.66.246#8080",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                "id": "1821101",
+                "ioc": "34.27.66.246:8080",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
