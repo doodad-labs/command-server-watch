@@ -1,0 +1,24 @@
+{
+    "ip": "192.227.219.79",
+    "flags": [
+        "remcos"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-03T18:43:59.290557",
+            "flags": [
+                "remcos"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-03T14:43:14",
+                "port": "4550",
+                "reference": "",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
+                "id": "1821907",
+                "ioc": "192.227.219.79:4550",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}

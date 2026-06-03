@@ -1,0 +1,24 @@
+{
+    "ip": "111.90.145.42",
+    "flags": [
+        "asyncrat"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-06-03T18:43:59.290604",
+            "flags": [
+                "asyncrat"
+            ],
+            "metadata": {
+                "firstSeen": "2026-06-03T14:41:47",
+                "port": "20",
+                "reference": "",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
+                "id": "1821885",
+                "ioc": "111.90.145.42:20",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
