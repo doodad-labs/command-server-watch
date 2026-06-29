@@ -11,12 +11,12 @@
                 "sliver"
             ],
             "metadata": {
-                "firstSeen": "2026-06-02T13:59:45",
-                "port": "8443",
-                "reference": "https://www.shodan.io/host/146.19.213.207#8443",
+                "firstSeen": "2026-06-02T13:59:54",
+                "port": "31337",
+                "reference": "https://www.shodan.io/host/146.19.213.207#31337",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.sliver",
-                "id": "1820978",
-                "ioc": "146.19.213.207:8443",
+                "id": "1821023",
+                "ioc": "146.19.213.207:31337",
                 "threat_type": "botnet_cc"
             }
         }
