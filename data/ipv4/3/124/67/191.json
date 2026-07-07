@@ -12,11 +12,11 @@
             ],
             "metadata": {
                 "firstSeen": "2026-06-02T14:31:19",
-                "port": "3232",
+                "port": "16242",
                 "reference": "",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.dcrat",
-                "id": "1821258",
-                "ioc": "3.124.67.191:3232",
+                "id": "1821257",
+                "ioc": "3.124.67.191:16242",
                 "threat_type": "botnet_cc"
             }
         }
