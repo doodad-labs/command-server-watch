@@ -1,0 +1,24 @@
+{
+    "ip": "159.203.1.105",
+    "flags": [
+        "aisuru"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-07-08T08:27:48.714949",
+            "flags": [
+                "aisuru"
+            ],
+            "metadata": {
+                "firstSeen": "2026-07-08T06:47:59",
+                "port": "12345",
+                "reference": null,
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
+                "id": "1846380",
+                "ioc": "159.203.1.105:12345",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
