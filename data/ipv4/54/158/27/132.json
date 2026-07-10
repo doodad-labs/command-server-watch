@@ -1,22 +1,22 @@
 {
-    "ip": "151.243.150.40",
+    "ip": "54.158.27.132",
     "flags": [
         "unknown malware"
     ],
     "results": [
         {
             "source": "threatfox",
-            "datetime": "2026-06-03T18:43:59.290808",
+            "datetime": "2026-07-10T07:35:12.969770",
             "flags": [
                 "unknown malware"
             ],
             "metadata": {
-                "firstSeen": "2026-06-03T14:36:24",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/151.243.150.40#8080",
+                "firstSeen": "2026-07-10T06:12:37",
+                "port": "31337",
+                "reference": "",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1821875",
-                "ioc": "151.243.150.40:8080",
+                "id": "1847760",
+                "ioc": "54.158.27.132:31337",
                 "threat_type": "botnet_cc"
             }
         }
