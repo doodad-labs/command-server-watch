@@ -12,11 +12,11 @@
             ],
             "metadata": {
                 "firstSeen": "2026-06-03T14:36:24",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/151.243.150.40#8080",
+                "port": "9999",
+                "reference": "https://www.shodan.io/host/151.243.150.40#9999",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1821875",
-                "ioc": "151.243.150.40:8080",
+                "id": "1821874",
+                "ioc": "151.243.150.40:9999",
                 "threat_type": "botnet_cc"
             }
         }
