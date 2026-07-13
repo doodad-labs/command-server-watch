@@ -12,11 +12,11 @@
             ],
             "metadata": {
                 "firstSeen": "2026-06-03T14:41:47",
-                "port": "3306",
+                "port": "8888",
                 "reference": "",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat",
-                "id": "1821889",
-                "ioc": "111.90.145.42:3306",
+                "id": "1821893",
+                "ioc": "111.90.145.42:8888",
                 "threat_type": "botnet_cc"
             }
         }
