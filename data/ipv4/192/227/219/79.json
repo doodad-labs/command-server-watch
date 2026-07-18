@@ -11,12 +11,12 @@
                 "remcos"
             ],
             "metadata": {
-                "firstSeen": "2026-06-03T14:43:14",
-                "port": "4550",
+                "firstSeen": "2026-06-03T14:43:15",
+                "port": "4553",
                 "reference": "",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos",
-                "id": "1821907",
-                "ioc": "192.227.219.79:4550",
+                "id": "1821909",
+                "ioc": "192.227.219.79:4553",
                 "threat_type": "botnet_cc"
             }
         }
