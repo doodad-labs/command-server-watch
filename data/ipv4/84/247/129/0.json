@@ -1,0 +1,24 @@
+{
+    "ip": "84.247.129.0",
+    "flags": [
+        "remus"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-07-26T11:25:17.739871",
+            "flags": [
+                "remus"
+            ],
+            "metadata": {
+                "firstSeen": "2026-07-26T10:56:03",
+                "port": "6520",
+                "reference": null,
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                "id": "1858111",
+                "ioc": "84.247.129.0:6520",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
