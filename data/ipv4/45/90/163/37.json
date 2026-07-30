@@ -11,12 +11,12 @@
                 "mirai"
             ],
             "metadata": {
-                "firstSeen": "2026-07-08T06:48:23",
-                "port": "3778",
+                "firstSeen": "2026-07-29T19:44:37",
+                "port": "35342",
                 "reference": "",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
-                "id": "1846138",
-                "ioc": "45.90.163.37:3778",
+                "id": "1863478",
+                "ioc": "45.90.163.37:35342",
                 "threat_type": "botnet_cc"
             }
         }
