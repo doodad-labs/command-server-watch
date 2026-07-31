@@ -1,0 +1,24 @@
+{
+    "ip": "85.31.60.169",
+    "flags": [
+        "remus"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-07-31T21:03:20.467941",
+            "flags": [
+                "remus"
+            ],
+            "metadata": {
+                "firstSeen": "2026-07-31T19:28:12",
+                "port": "4437",
+                "reference": null,
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
+                "id": "1866333",
+                "ioc": "85.31.60.169:4437",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
