@@ -1,0 +1,24 @@
+{
+    "ip": "124.220.34.180",
+    "flags": [
+        "cobalt strike"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-07-31T07:49:30.750397",
+            "flags": [
+                "cobalt strike"
+            ],
+            "metadata": {
+                "firstSeen": "2026-07-31T05:45:41",
+                "port": "6666",
+                "reference": null,
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
+                "id": "1865072",
+                "ioc": "124.220.34.180:6666",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}

@@ -11,12 +11,12 @@
                 "aisuru"
             ],
             "metadata": {
-                "firstSeen": "2026-07-11T05:29:50",
-                "port": "8001",
-                "reference": null,
+                "firstSeen": "2026-07-13T07:03:01",
+                "port": "8080",
+                "reference": "https://github.com/deepfield/public-research/blob/main/aisuru/README.md",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.aisuru",
-                "id": "1848277",
-                "ioc": "164.37.109.234:8001",
+                "id": "1849607",
+                "ioc": "164.37.109.234:8080",
                 "threat_type": "botnet_cc"
             }
         }
