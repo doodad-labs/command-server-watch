@@ -1,22 +1,22 @@
 {
-    "ip": "72.62.195.74",
+    "ip": "64.176.12.165",
     "flags": [
         "remus"
     ],
     "results": [
         {
             "source": "threatfox",
-            "datetime": "2026-07-22T09:25:32.635652",
+            "datetime": "2026-08-14T08:15:21.837688",
             "flags": [
                 "remus"
             ],
             "metadata": {
-                "firstSeen": "2026-08-11T14:19:31",
-                "port": "2536",
+                "firstSeen": "2026-08-14T06:19:46",
+                "port": "8811",
                 "reference": null,
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1872293",
-                "ioc": "72.62.195.74:2536",
+                "id": "1873973",
+                "ioc": "64.176.12.165:8811",
                 "threat_type": "botnet_cc"
             }
         }
