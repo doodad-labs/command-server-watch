@@ -11,12 +11,12 @@
                 "remus"
             ],
             "metadata": {
-                "firstSeen": "2026-07-31T19:28:12",
-                "port": "4437",
+                "firstSeen": "2026-08-07T09:39:44",
+                "port": "2535",
                 "reference": null,
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.remus",
-                "id": "1866333",
-                "ioc": "85.31.60.169:4437",
+                "id": "1869735",
+                "ioc": "85.31.60.169:2535",
                 "threat_type": "botnet_cc"
             }
         }
