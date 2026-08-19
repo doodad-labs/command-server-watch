@@ -1,0 +1,24 @@
+{
+    "ip": "151.242.63.24",
+    "flags": [
+        "unknown stealer"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-08-19T06:41:44.221907",
+            "flags": [
+                "unknown stealer"
+            ],
+            "metadata": {
+                "firstSeen": "2026-08-19T06:05:58",
+                "port": "7443",
+                "reference": "https://infosec.exchange/@RecklessPush38671/117118098460752628",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown_stealer",
+                "id": "1881385",
+                "ioc": "151.242.63.24:7443",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
