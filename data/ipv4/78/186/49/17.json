@@ -1,0 +1,24 @@
+{
+    "ip": "78.186.49.17",
+    "flags": [
+        "unknown malware"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-08-20T06:43:49.273609",
+            "flags": [
+                "unknown malware"
+            ],
+            "metadata": {
+                "firstSeen": "2026-08-20T05:43:22",
+                "port": "1337",
+                "reference": "https://www.shodan.io/host/78.186.49.17#1337",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
+                "id": "1882916",
+                "ioc": "78.186.49.17:1337",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
