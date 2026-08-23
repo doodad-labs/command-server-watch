@@ -11,12 +11,12 @@
                 "cobalt strike"
             ],
             "metadata": {
-                "firstSeen": "2026-08-13T05:53:07",
-                "port": "80",
-                "reference": null,
+                "firstSeen": "2026-08-18T11:58:14",
+                "port": "50050",
+                "reference": "https://www.shodan.io/host/68.64.182.169#50050",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1873348",
-                "ioc": "68.64.182.169:80",
+                "id": "1880341",
+                "ioc": "68.64.182.169:50050",
                 "threat_type": "botnet_cc"
             }
         }
