@@ -1,0 +1,24 @@
+{
+    "ip": "94.154.43.249",
+    "flags": [
+        "mirai"
+    ],
+    "results": [
+        {
+            "source": "threatfox",
+            "datetime": "2026-08-24T07:59:29.930394",
+            "flags": [
+                "mirai"
+            ],
+            "metadata": {
+                "firstSeen": "2026-08-24T07:46:06",
+                "port": "2327",
+                "reference": "",
+                "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/elf.mirai",
+                "id": "1885883",
+                "ioc": "94.154.43.249:2327",
+                "threat_type": "botnet_cc"
+            }
+        }
+    ]
+}
