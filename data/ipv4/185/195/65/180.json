@@ -1,22 +1,22 @@
 {
-    "ip": "47.82.234.12",
+    "ip": "185.195.65.180",
     "flags": [
         "cobalt strike"
     ],
     "results": [
         {
             "source": "threatfox",
-            "datetime": "2026-05-28T13:33:04.490016",
+            "datetime": "2026-08-30T07:56:15.354680",
             "flags": [
                 "cobalt strike"
             ],
             "metadata": {
-                "firstSeen": "2026-08-18T11:58:09",
-                "port": "50050",
-                "reference": "https://www.shodan.io/host/47.82.234.12#50050",
+                "firstSeen": "2026-08-30T07:09:30",
+                "port": "443",
+                "reference": null,
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.cobalt_strike",
-                "id": "1880322",
-                "ioc": "47.82.234.12:50050",
+                "id": "1891245",
+                "ioc": "185.195.65.180:443",
                 "threat_type": "botnet_cc"
             }
         }
