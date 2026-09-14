@@ -11,12 +11,12 @@
                 "adaptixc2"
             ],
             "metadata": {
-                "firstSeen": "2026-08-18T12:03:42",
-                "port": "4321",
-                "reference": "https://www.shodan.io/host/89.23.110.250#4321",
+                "firstSeen": "2026-09-14T11:18:06",
+                "port": "9443",
+                "reference": "https://www.shodan.io/host/89.23.110.250#9443",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/win.adaptix_c2",
-                "id": "1880765",
-                "ioc": "89.23.110.250:4321",
+                "id": "1917595",
+                "ioc": "89.23.110.250:9443",
                 "threat_type": "botnet_cc"
             }
         }

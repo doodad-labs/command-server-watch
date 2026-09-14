@@ -11,12 +11,12 @@
                 "unknown malware"
             ],
             "metadata": {
-                "firstSeen": "2026-08-18T12:05:02",
-                "port": "8080",
-                "reference": "https://www.shodan.io/host/64.90.10.227#8080",
+                "firstSeen": "2026-09-14T11:17:00",
+                "port": "4433",
+                "reference": "https://www.shodan.io/host/64.90.10.227#4433",
                 "malware_malpedia": "https://malpedia.caad.fkie.fraunhofer.de/details/unknown",
-                "id": "1880777",
-                "ioc": "64.90.10.227:8080",
+                "id": "1917588",
+                "ioc": "64.90.10.227:4433",
                 "threat_type": "botnet_cc"
             }
         }
